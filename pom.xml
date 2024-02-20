@@ -46,6 +46,11 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- <dependency>
+      <groupId>org.camunda.bpm.quarkus</groupId>
+      <artifactId>camunda-bpm-quarkus-engine</artifactId>
+      <version>7.18.0</version>
+    </dependency> -->
   </dependencies>
   <build>
     <plugins>
