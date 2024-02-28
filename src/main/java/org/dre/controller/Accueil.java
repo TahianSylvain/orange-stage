@@ -9,11 +9,9 @@ import org.dre.service.PersonnelService;
 
 import java.util.List;
 
+
 @Path("/accueil")
-
 public class Accueil {
-
-
     @Inject
     PersonnelService personnelService;
 
@@ -22,13 +20,10 @@ public class Accueil {
     public String personnels() {
         List<Personnel> personnels = Personnel.listAll() ;
         String nom ="";
-        for( Personnel p : personnels )
-        {
-            nom+=p.getNom();
-        }
-                return "Bienvenue sur la page d'accueil zandry "+nom+ "!";
+        for( Personnel p : personnels){
+            nom+=p.getNom();}
+        return "Bienvenue sur la page d'accueil "+nom+ "!";
     }
-
 
     @GET
     @Path("/all")
@@ -39,12 +34,12 @@ public class Accueil {
         return Response.ok(personnels).build();
     }
 
-    @POST
-    @Path("/c")
-    public Response createUser(Personnel personnel) {
-        personnelService.createUser(personnel);
-        return Response.status(Response.Status.CREATED).entity(personnel).build();
-    }
+    // @POST
+    // @Path("/c")
+    // public Response createUser(Personnel personnel) {
+    //     // personnelService.createUser(personnel);
+    //     // return Response.status(Response.Status.CREATED).entity(personnel).build();
+    // }
 
     //PUT || UPDATE
     @PUT
@@ -67,15 +62,11 @@ public class Accueil {
     @Path("/one")
     @Produces(MediaType.APPLICATION_JSON)
     public Personnel getOnePersonnel() {
-
         Personnel p =  new Personnel();
         p.setId(2L);
         p.setNom("Andrew");
         p.setPrenom("Mathew");
         p.setAge(12);
         return p;
-
     }
-
-
 }

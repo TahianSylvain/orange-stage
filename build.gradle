@@ -1,7 +1,6 @@
 plugins {
     id 'io.quarkus'
     id 'java'
-
 }
 
 repositories {
@@ -10,6 +9,10 @@ repositories {
 }
 
 dependencies {
+    // implementation("io.quarkus:quarkus-keycloak-admin-client-reactive")
+    // implementation("io.quarkus:quarkus-oidc")
+    implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
@@ -22,7 +25,6 @@ dependencies {
 //    implementation 'com.google.code.gson:gson:2.8.8' // Utilisez la dernière version disponible
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
-
 
 }
 
