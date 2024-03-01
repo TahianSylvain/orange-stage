@@ -2,7 +2,7 @@ create database oma;
 	alter database oma owner to dre;
 drop table personnel;
 drop sequence Personnel_SEQ cascade ;
-create  sequence  Personnel_SEQ INCREMENT BY 50;
+create  sequence  Personnel_SEQ INCREMENT BY 1;
 	create table personnel
 		(
 			id bigint primary key default (nextval('Personnel_SEQ')),

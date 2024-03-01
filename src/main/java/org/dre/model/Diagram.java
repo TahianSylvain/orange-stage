@@ -25,16 +25,13 @@ public class Diagram extends PanacheEntity {
     @JsonProperty("title")
     private String title;
 
-    @JsonProperty("descripition")
+    @JsonProperty("description")
     private String description;
 
     @ManyToMany(mappedBy = "diagrams")
     private List<Personnel> personnelList;
 
-    @Column(
-     unique = true,
-     nullable = true)
-    //  columnDefinition=TEXT, CLOB) ///postgres_optimus
+    @Column( unique = true, nullable = true) 
     private String bpmn2;   // XML as a String
 
 

@@ -13,8 +13,14 @@ import jakarta.ws.rs.core.MediaType;
 import org.dre.model.Diagram;
 import org.dre.service.DiagramService;
 
-import java.util.List;
+// import org.openqa.selenium.WebDriver;
+// import org.openqa.selenium.WebElement;
+// import org.openqa.selenium.firefox.FirefoxDriver;
+// import org.openqa.selenium.firefox.FirefoxOptions;
+// import org.testng.Assert;
+// import org.testng.annotations.Test;
 
+import java.util.List;
 
 @Path("/diagram")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -39,10 +45,55 @@ public class DiagramResource {
         return diagramService.createDiagram(diagram);
     }
 
-    @PUT
-    @Path("/{id}")
+    @PUT //####################OptimusPrime#########################
+    @Path("/optimus/{id}")
     public Diagram updateDiagram(@PathParam("id") Long id, Diagram diagram) {
-        diagram.setId(id); // Ensure ID matches URL parameter
+        diagram.setId(id); 
+        
+        //public void login() {
+        //     try { WebDriver driver = new FirefoxDriver(); }
+        //     finally { WebDriver driver = new WebDriver(); }
+                
+        //     //driver.manage().window().maximize();
+        //     driver.get("https://www.taskade.com/login"); 
+        //     WebElement email = driver.findElement(By.id("username"));
+        //     WebElement password = driver.findElement(By.id("password"));
+        //     WebElement login=driver.findElement(By.type("submit"));
+
+        //     email.sendKeys("@gmail.com");
+        //     password.sendKeys("your_password");
+        //     login.click();
+            
+        //?     String actualUrl="https://live.browserstack.com/dashboard";
+        //?     String expectedUrl= driver.getCurrentUrl();
+        //?     Assert.assertEquals(expectedUrl,actualUrl);
+        // }
+
+        
+        /*-------------get propositions throughout SeleniumScrapping--------------
+        import org.openqa.selenium.By;
+        import org.openqa.selenium.WebDriver;
+        import org.openqa.selenium.WebElement;
+        import org.openqa.selenium.chrome.ChromeDriver;
+        import org.testng.Assert;
+        import org.testng.annotations.Test;
+
+            @Test
+            public void login() {
+                WebDriver driver = new FirefoxDriver(
+                    new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"), safariOptions);
+                    wait = new WebDriverWait(driver, Duration.ofSeconds(10)     );
+                //driver.manage().window().maximize();
+                driver.navigate.to("https://www.browserstack.com/users/sign_in"); // driver.get()
+                WebElement password = driver.findElement(By.id("user_password"));
+                WebElement login=driver.findElement(By.name("commit"));
+                password.sendKeys("your_password");
+                login.click();
+                String actualUrl="https://live.browserstack.com/dashboard";
+                String expectedUrl= driver.getCurrentUrl();
+                Assert.assertEquals(expectedUrl,actualUrl);
+            }
+         */
         return diagramService.updateDiagram(diagram);
     }
 
@@ -53,28 +104,3 @@ public class DiagramResource {
     }
 }
 
-
-/* ... (similar code as before for creating diagram and diagram)
-    diagram1.getDiagrams().add(diagram);
-    diagram2.getDiagrams().add(diagram);
-
-    // Now a diagram can also be associated with multiple diagram:
-    Diagram anotherDiagram = new Diagram();
-    anotherDiagram.setTitle("Project Y");
-    anotherDiagram.setDescription("Design overview");
-
-    diagram1.getDiagrams().add(anotherDiagram);
-    diagram2.getDiagrams().add(anotherDiagram);
-
-    // Persist the entities
-    diagram.persist();
-    anotherDiagram.persist();
-
-
-    Diagram diagram = new Diagram();
-    diagram.setTitle("My Process");
-    diagram.setDescription("Process overview");
-    diagram.setBpmn2("... your BPMN content as a string ..."); // Optional
-
-    // Persist the diagram
-    diagram.persist();*/

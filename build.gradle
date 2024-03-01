@@ -11,18 +11,23 @@ repositories {
 dependencies {
     // implementation("io.quarkus:quarkus-keycloak-admin-client-reactive")
     // implementation("io.quarkus:quarkus-oidc")
-    implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+
+    // implementation "org.seleniumhq.selenium:selenium-java"
+    // implementation 'org.seleniumhq.selenium:selenium-chrome-driver'
+    // implementation 'org.seleniumhq.selenium:selenium-firefox-driver'
+    implementation "io.quarkus:quarkus-resteasy-reactive-jackson"
 
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
+
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
 
 //    base de donnée
     implementation 'io.quarkus:quarkus-hibernate-orm-panache'
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
-//    implementation 'com.google.code.gson:gson:2.8.8' // Utilisez la dernière version disponible
+
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
 
@@ -35,7 +40,11 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-
+task copyTemplates(type: Copy) {
+    from 'src/main/resources/templates'
+    exclude '*.eot' 
+    into 'build/resources/main/templates'
+}
 test {
     systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
 }

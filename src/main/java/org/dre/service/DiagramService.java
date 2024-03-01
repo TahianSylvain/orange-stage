@@ -1,13 +1,16 @@
 package org.dre.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import org.dre.model.Diagram;
 import org.dre.repository.DiagramRepository;
 import java.util.List;
 
-@ApplicationScoped
+
+@RequestScoped
+// @ApplicationScoped
 public class DiagramService {
     @Inject 
     DiagramRepository diagramRepository;
