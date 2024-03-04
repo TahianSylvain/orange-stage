@@ -1,0 +1,44 @@
+{
+  "name": "bpmn-js-example-modeler",
+  "version": "0.0.0",
+  "description": "A simple modeler built with bpmn-js",
+  "scripts": {
+    "all": "run-s build",
+    "prod": "webpack --mode production && mv build/* ../resources/META-INF/resources",
+    "dev": "webpack-dev-server --static=public --open",
+    "start": "run-s dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/bpmn-js-examples"
+  },
+  "keywords": [
+    "bpmnjs-example"
+  ],
+  "author": {
+    "name": "Nico Rehwaldt",
+    "url": "https://github.com/nikku"
+  },
+  "contributors": [
+    {
+      "name": "bpmn.io contributors",
+      "url": "https://github.com/bpmn-io"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.0",
+    "eslint": "^8.25.0",
+    "eslint-plugin-bpmn-io": "^1.0.0",
+    "npm-run-all2": "^6.0.0",
+    "raw-loader": "^4.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^5.0.0"
+  },
+  "dependencies": {
+    "bpmn-js": "^17.0.0",
+    "diagram-js": "^14.0.0",
+    "jquery": "^3.3.1"
+  }
+}
