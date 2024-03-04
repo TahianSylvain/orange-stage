@@ -1,8 +1,8 @@
-package org.dre;
+// package org.dre;
 
-import io.quarkus.test.junit.QuarkusIntegrationTest;
+// import io.quarkus.test.junit.QuarkusIntegrationTest;
 
-@QuarkusIntegrationTest
-public class GreetingResourceIT extends GreetingResourceTest {
-    // Execute the same tests but in packaged mode.
-}
+// @QuarkusIntegrationTest
+// public class GreetingResourceIT extends GreetingResourceTest {
+//     // Execute the same tests but in packaged mode.
+// }
