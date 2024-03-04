@@ -10,6 +10,9 @@ repositories {
 }
 
 dependencies {
+    // ilay zavatra tokony ho maven iny de adaptena graddle
+    implementation 'org.camunda.bpm.quarkus:camunda-bpm-quarkus-engine:7.20.0'
+
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
@@ -22,6 +25,7 @@ dependencies {
 //    implementation 'com.google.code.gson:gson:2.8.8' // Utilisez la dernière version disponible
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
 
 
 }
