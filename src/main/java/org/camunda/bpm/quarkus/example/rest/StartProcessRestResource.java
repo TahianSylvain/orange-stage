@@ -16,17 +16,25 @@
  */
 package org.camunda.bpm.quarkus.example.rest;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.variable.Variables;
 import org.camunda.bpm.engine.variable.value.ObjectValue;
+import org.camunda.bpm.quarkus.example.dto.OrderItem;
 import org.camunda.commons.utils.IoUtil;
 
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
-import java.io.InputStream;
+
 
 @Path("/store-order-items")
 @Produces("application/json")
@@ -34,15 +42,18 @@ public class StartProcessRestResource {
   @Inject 
   public RuntimeService runtimeService;
 
+
   @POST
   @Consumes("application/json")
-  public void startProcess(InputStream payload) {
+  public String startProcess(InputStream payload) {
     String orderItemsAsString = IoUtil.inputStreamAsString(payload);
-    ObjectValue orderItems = Variables.serializedObjectValue(orderItemsAsString)
-        .objectTypeName("java.util.ArrayList<org.camunda.bpm.quarkus.example.dto.OrderItem>")
-        .serializationDataFormat(Variables.SerializationDataFormats.JSON)
-        .create();
-    runtimeService.startProcessInstanceByKey("order-item-process",
-        Variables.putValueTyped("orderItems", orderItems));
+
+      ObjectValue orderItems = Variables.serializedObjectValue(orderItemsAsString)
+          .objectTypeName("java.util.ArrayList<org.camunda.bpm.quarkus.example.dto.OrderItem>")
+          .serializationDataFormat(Variables.SerializationDataFormats.JSON)
+          .create();
+      runtimeService.startProcessInstanceByKey("order-item-process",
+          Variables.putValueTyped("orderItems", orderItems));
+    return "Processed? OK";
   }
 }

@@ -1,4 +1,4 @@
-package org.camunda.bpm.quarkus.example;
+package org.camunda.bpm.quarkus.example.rest;
 
 import org.camunda.bpm.quarkus.example.model.Personnel;
 import org.camunda.bpm.quarkus.example.security.Roles;
@@ -26,14 +26,8 @@ public class ExampleResource {
     @Path("/me")
     @RolesAllowed({Roles.USER, Roles.SERVICE})
     public Personnel me() {
-        return Personnel.find("email", securityContext.getUserPrincipal().getName()).firstResult();
-    }
-
-    @GET
-    @Path("/admin")
-    @RolesAllowed(Roles.ADMIN)
-    public String adminTest() {
-        return "If you see this text as a user, then something is broke";
+        return Personnel.find("email", 
+        securityContext.getUserPrincipal().getName()).firstResult();
     }
 
     @GET
@@ -42,5 +36,4 @@ public class ExampleResource {
     public String nothing() {
         return "This method should always return 403";
     }
-
 }

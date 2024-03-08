@@ -1,0 +1,11 @@
+package org.camunda.bpm.quarkus.example;
+
+
+@Test
+void calculateDifference(){
+    ExcelScrapper excelScrapper = new ExcelScrapper();
+
+    List<Footballer> playerList = excelScrapper.getTopNPlayersForPosition(3,
+            "src/main/resources/efl_players.xlsx");
+    playerList.forEach(System.out::println);
+}

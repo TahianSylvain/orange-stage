@@ -3,8 +3,6 @@ package org.camunda.bpm.quarkus.example.model;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;

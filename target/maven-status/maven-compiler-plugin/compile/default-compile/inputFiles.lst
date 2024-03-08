@@ -1,3 +1,4 @@
+/home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/service/MakeCakeService.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/repository/PersonnelRepository.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/service/StoreOrderItemService.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/model/Diagram.java
@@ -6,12 +7,14 @@
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/model/Personnel.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/ResourceDeployment.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/rest/DiagramResource.java
+/home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/rest/StartCakeRestResource.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/rest/UserResource.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/service/PersonnelService.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/rest/PersonnelResource.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/dto/OrderItem.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/EngineConfiguration.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/rest/ExampleResource.java
+/home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/dto/CakeMaker.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/service/TokenService.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/repository/DiagramRepository.java
 /home/tahiana/Documents/Java/Quarkus/maven/camunda-bpm-examples/quarkus-extension/spin-plugin-example/src/main/java/org/camunda/bpm/quarkus/example/security/Roles.java

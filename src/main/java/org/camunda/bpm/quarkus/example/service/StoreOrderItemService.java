@@ -28,7 +28,8 @@ import jakarta.inject.Named;
 @Named
 @Dependent
 public class StoreOrderItemService implements JavaDelegate {
-  protected static final Logger LOG = Logger.getLogger(StoreOrderItemService.class);
+  protected static final Logger LOG = Logger.getLogger(
+    StoreOrderItemService.class);
 
   @Override
   public void execute(DelegateExecution execution) {
@@ -38,5 +39,6 @@ public class StoreOrderItemService implements JavaDelegate {
 
     LOG.infov("Hurray, order item {0} with price {1} stored!", name, price);
     // Add logic to store order item here
+    // Ingredient   Quantity     Price[€]     Price[MGA]    TAXES
   }
 }

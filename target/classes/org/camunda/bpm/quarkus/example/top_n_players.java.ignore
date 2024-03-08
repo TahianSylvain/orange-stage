@@ -1,0 +1,10 @@
+package org.camunda.bpm.quarkus.example;
+
+public List<Footballer> getTopNPlayers(Map<Footballer, Double> players, int n){
+        return players.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(n)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+    }

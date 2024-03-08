@@ -1,0 +1,18 @@
+package org.camunda.bpm.quarkus.example;
+// https://levelup.gitconnected.com/excel-parsing-with-apache-poi-and-java-a-comprehensive-guide-eddfe17ccbd2
+
+
+public class Footballer {
+
+    private String name;
+    private String position;
+    private String club;
+    private double total_score;
+    private int matches;
+
+    public String toString() {
+        return "Footballer [name=" + name + ", position=" + position + ",
+         club=" + club + ", total_score=" + total_score + ", matches=" + matches + "]";
+    }
+    //generated getters setters ommitted
+}

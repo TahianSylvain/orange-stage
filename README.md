@@ -22,7 +22,7 @@ The example demonstrates how you can use the Camunda Platform Runtime Engine in 
 To store order items, perform the following REST API request:
 
 ```sh
-curl -X POST 'http://localhost:8080/store-order-items' \
+curl -X POST 'http://localhost:9090/store-order-items' \
   -H 'Content-Type: application/json' \
   --data-raw '
   [

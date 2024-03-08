@@ -1,0 +1,32 @@
+package org.camunda.bpm.quarkus.example.service;
+
+import jakarta.inject.Inject;
+import java.util.List;
+
+
+
+@Inject
+@Named("excelWriter")
+private Workbook excelWriter;
+
+public void writeExcelData(List<MyData> data, String filePath) throws IOException {
+    // Create a new workbook
+    Workbook workbook = new XSSFWorkbook();
+
+    // Create a new sheet
+    Sheet sheet = workbook.createSheet("My Data");
+
+    // Write data to the sheet
+    int rowNum = 0;
+    for (MyData item : data) {
+        Row row = sheet.createRow(rowNum++);
+        // Write values to each cell based on your data object
+        row.createCell(0).setCellValue(item.getField1());
+        // ... (write data for other fields)
+    }
+
+    // Write the workbook to a file
+    FileOutputStream outputStream = new FileOutputStream(filePath);
+    excelWriter.write(workbook, outputStream);
+    outputStream.close();
+}

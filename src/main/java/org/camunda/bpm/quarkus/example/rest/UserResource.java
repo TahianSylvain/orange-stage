@@ -26,10 +26,13 @@ public class UserResource {
 
     @GET
     @Path("/login")
-    public String login(@QueryParam("login")String login, @QueryParam("password") String password) {
+    @SuppressWarnings("resource") public String login(
+        @QueryParam("login")String login, @QueryParam("password") String password
+    ) {
         Personnel existingUser = Personnel.find("login", login).firstResult();
         if(existingUser == null || !existingUser.password.equals(password)) {
-            throw new WebApplicationException(Response.status(404).entity("No user found or password is incorrect").build());
+            throw new WebApplicationException(
+                Response.status(404).entity("No user found or password is incorrect").build());
         }
         return service.generateUserToken(existingUser.email, password);
     }

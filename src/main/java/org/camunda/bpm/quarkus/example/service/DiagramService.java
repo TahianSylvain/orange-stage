@@ -1,6 +1,5 @@
 package org.camunda.bpm.quarkus.example.service;
 
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;

@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 package org.camunda.bpm.quarkus.example;
+
 import org.camunda.bpm.engine.RepositoryService;
 import org.camunda.bpm.quarkus.engine.extension.event.CamundaEngineStartupEvent;
 import org.jboss.logging.Logger;

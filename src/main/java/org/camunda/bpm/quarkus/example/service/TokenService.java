@@ -16,7 +16,8 @@ import java.util.UUID;
 @RequestScoped
 public class TokenService {
 
-    public final static Logger LOGGER = Logger.getLogger(TokenService.class.getSimpleName());
+    public final static Logger LOGGER = Logger.getLogger(TokenService.class
+        .getSimpleName());
 
     public String generateUserToken(String email, String username) {
         return generateToken(email, username, Roles.USER);
