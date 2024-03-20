@@ -16,18 +16,17 @@ public class ExampleResource {
     SecurityContext securityContext;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
     @PermitAll
-    public String hello() {
-        return "hello";
-    }
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello() { return "hello"; }
 
     @GET
     @Path("/me")
     @RolesAllowed({Roles.USER, Roles.SERVICE})
     public Personnel me() {
-        return Personnel.find("email", 
-        securityContext.getUserPrincipal().getName()).firstResult();
+        return Personnel
+            .find("email",securityContext.getUserPrincipal().getName())
+            .firstResult();
     }
 
     @GET

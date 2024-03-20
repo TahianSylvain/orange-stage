@@ -1,0 +1,34 @@
+package org.camunda.bpm.quarkus.example;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.inject.Inject;
+import freemarker.template.Template;
+import freemarker.template.Configuration;
+
+import freemarker.template.TemplateException;
+import io.quarkiverse.freemarker.runtime.TemplatePath;
+
+import java.io.IOException;
+import java.util.Map;
+
+
+@Path("/")
+public class GreetingResource {
+
+    @Inject
+    @TemplatePath("index.ftl")
+    Template hello;
+
+    @Inject
+    Configuration freeMarkerConfig; // Inject FreeMarker Configuration
+
+	@GET
+	public String hello() throws IOException, TemplateException { // return "hi";
+		Map<String, Object> data = Map.of("greeting", "Hello from Quarkus!"); // Example data
+		//Render the template with data
+		StringWriter writer = new StringWriter();
+		hello.process(data, writer);
+		return writer.toString();
+	} /**/
+}
