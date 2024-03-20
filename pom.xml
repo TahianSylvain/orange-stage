@@ -12,6 +12,7 @@
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <quarkus.package.type>native</quarkus.package.type>
     <quarkus.version>3.2.6.Final</quarkus.version>
   </properties>
   <dependencyManagement>
@@ -37,6 +38,10 @@
       <groupId>org.camunda.bpm.quarkus</groupId>
       <artifactId>camunda-bpm-quarkus-engine</artifactId>
     </dependency>
+    <!-- dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-freemarker</artifactId>
+    </dependency -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-plugin-spin</artifactId>
@@ -45,6 +50,10 @@
       <groupId>org.camunda.spin</groupId>
       <artifactId>camunda-spin-dataformat-json-jackson</artifactId>
     </dependency>
+    <!--dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-native</artifactId>
+    </dependency -->
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-arc</artifactId>
@@ -60,7 +69,7 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-reactive</artifactId>
-    </dependency>
+    </dependency> 
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-junit5</artifactId>
@@ -110,4 +119,14 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>native</id>
+      <activation>
+        <property>
+          <name>native</name>
+        </property>
+      </activation>
+      </profile>
+  </profiles>
 </project>

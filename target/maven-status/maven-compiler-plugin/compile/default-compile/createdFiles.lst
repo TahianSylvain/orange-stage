@@ -6,13 +6,17 @@ org/camunda/bpm/quarkus/example/service/StoreOrderItemService.class
 org/camunda/bpm/quarkus/example/model/Personnel.class
 org/camunda/bpm/quarkus/example/EngineConfiguration.class
 org/camunda/bpm/quarkus/example/model/Diagram.class
+org/camunda/bpm/quarkus/example/service/MakeCakeService.class
+org/camunda/bpm/quarkus/example/dto/CakeMaker.class
 org/camunda/bpm/quarkus/example/rest/StartProcessRestResource.class
 org/camunda/bpm/quarkus/example/security/Roles.class
+org/camunda/bpm/quarkus/example/rest/ExampleResource.class
 org/camunda/bpm/quarkus/example/repository/PersonnelRepository.class
 org/camunda/bpm/quarkus/example/service/TokenService.class
 org/camunda/bpm/quarkus/example/service/PersonnelService.class
 META-INF/panache-archive.marker
 org/camunda/bpm/quarkus/example/security/TokenUtils.class
+org/camunda/bpm/quarkus/example/rest/StartCakeRestResource.class
 org/camunda/bpm/quarkus/example/repository/DiagramRepository.class
 org/camunda/bpm/quarkus/example/rest/DiagramResource.class
 org/camunda/bpm/quarkus/example/dto/OrderItem.class

@@ -1,8 +1,0 @@
-package org.camunda.bpm.quarkus.example;
-
-
-public List<Footballer> getTopNPlayersForPosition(int n, String path){
-    Map<String, List<Footballer>> players = readExcelFile(path, null);
-    Map<Footballer, Double> topPlayers = calculateTopPlayersForPositions(players);
-    return getTopNPlayers(topPlayers, n);
-}
