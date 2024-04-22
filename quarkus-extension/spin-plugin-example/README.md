@@ -1,20 +1,20 @@
-*# Camunda Platform Runtime: Quarkus Engine Extension Spin Example
+![company](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNE7hhUvWXZiSKRuv3gaDf2tt3chPYyknH-g&usqp=CAU)
+![backend](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyUkJVUPxbVDLPhRZ7zFF_34242cwGN_MHzQ&usqp=CAU)
+![engine](https://avatars.githubusercontent.com/u/2443838?s=200&v=4)
+# Camunda Platform Runtime: Quarkus Engine Extension Spin Example
 
 This example uses Quarkus, the Supersonic Subatomic Java Framework, 
 in combination with the extension `camunda-bpm-quarkus-engine`.
 
 If you want to learn more about Quarkus, please visit: https://quarkus.io/.
 
-The example demonstrates how you can use the Camunda Platform Runtime Engine in combination with Quarkus to spawn a node that:
+The example demonstrates how you can use the Camunda Platform Runtime Engine in combination with Quarkus and Home Made Artificial Intelligence:
+________                               _______________
+___  __/__________________________________  ____/__  /________      __
+__  /  _  _ \_  __ \_  ___/  __ \_  ___/_  /_   __  /_  __ \_ | /| / /
+_  /   /  __/  / / /(__  )/ /_/ /  /   _  __/   _  / / /_/ /_ |/ |/ /
+/_/    \___//_/ /_//____/ \____//_/    /_/      /_/  \____/____/|__/
 
-* Connects to an H2 on-disk database.
-* [Registers the Camunda Spin Process Engine Plugin](org/camunda/bpm/quarkus/example/EngineConfiguration.java).
-* Bootstraps a process engine.
-* [Automatically deploys](org/camunda/bpm/quarkus/example/ResourceDeployment.java) the resource [process.bpmn](src/main/resources/process.bpmn) to the process engine.
-* Exposes a REST endpoint that:
-  * starts a process instance
-  * stores the JSON payload as a process variable
-  * calls the [StoreOderItemService](org/camunda/bpm/quarkus/example/service/StoreOrderItemService.java) bean.
 
 To store order items, perform the following REST API request:
 
@@ -71,7 +71,7 @@ You can run your application in dev mode that enables live coding using:
 mvn clean compile quarkus:dev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:9090/q/dev/.
 
 ## Packaging and running the application
 
