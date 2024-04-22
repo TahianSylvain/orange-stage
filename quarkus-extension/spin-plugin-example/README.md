@@ -1,4 +1,4 @@
-# Camunda Platform Runtime: Quarkus Engine Extension Spin Example
+*# Camunda Platform Runtime: Quarkus Engine Extension Spin Example
 
 This example uses Quarkus, the Supersonic Subatomic Java Framework, 
 in combination with the extension `camunda-bpm-quarkus-engine`.
@@ -19,25 +19,33 @@ The example demonstrates how you can use the Camunda Platform Runtime Engine in 
 To store order items, perform the following REST API request:
 
 ```sh
-curl -X POST 'http://localhost:8080/store-order-items' \
+curl -X POST 'http://localhost:9090/store-order-items' \
   -H 'Content-Type: application/json' \
   --data-raw '
   [
     {
-      "name": "Skin Care",
-      "price": 4.56
+      "name": "All-purpose flour",
+      "price": 6.99,
+      "period": 3,
+      "origine": "£"
     },
     {
-      "name": "Watch",
-      "price": 60.55
+      "name": "Granulated sugar",
+      "price": 7.99,
+      "period": 6,
+      "origine": "€"
     },
     {
-      "name": "Cookies",
-      "price": 1.99
+      "name": "Cocoa powder",
+      "price": 9.99,
+      "period": 9,
+      "origine": "$"
     },
     {
-      "name": "Pasta",
-      "price": 0.95
+      "name": "Baking Soda",
+      "price": 0.0009,
+      "period": 12,
+      "origine": "BTC"
     }
   ]'
 ```

@@ -1,0 +1,7 @@
+Flask                       
+Flask-CORS
+jsonify                      
+keras    
+pyfiglet                    
+requests                     
+tensorflow                   
