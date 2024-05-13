@@ -6,11 +6,11 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-## Running the application in dev mode
-
-You can run your application in dev mode that enables live coding using:
-```shell script
-./gradlew quarkusDev
+# Granting the power of the new Engine called *JBPM*
+```shell
+wget https://www.jbpm.org/download/download/community.html
+unzip jbpm-server-7.74.1.Final-dist.zip
+./bin/standalone.bat || ./bin/standalone.sh
 ```
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
